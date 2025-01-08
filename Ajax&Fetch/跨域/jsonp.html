@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.JSONP的原理
+    // script标签跨域不会被浏览器阻止
+    // JSONP主要就是利用script标签，加载跨域文件
+
+    // 2.使用JSONP实现跨域
+    // 服务器端准备好JSONP接口
+    // 手动加载JSONP接口
+    // https://www.imooc.com/api/http/jsonp?callback=handleResponse
+    // handleResponse({ "code": 200, "data": [ { "word": "jsp" }, { "word": "js" }, { "word": "json" }, { "word": "js 入门" }, { "word": "jstl" } ] });
+    
+    const scp = document.createElement('script');
+    scp.src = 'https://www.imooc.com/api/http/jsonp?callback=handleResponse';
+    document.body.appendChild(scp);
+
+    const handleResponse = data => {
+      console.log(data);
+    }
+  </script>
+  <!-- <script src="https://www.imooc.com/api/http/jsonp?callback=handleResponse"></script> -->
+  <!-- 相当于 -->
+  <!-- <script>
+    handleResponse({ "code": 200, "data": [ { "word": "jsp" }, { "word": "js" }, { "word": "json" }, { "word": "js 入门" }, { "word": "jstl" } ] });
+  </script> -->
+</body>
+</html>

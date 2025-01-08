@@ -1,0 +1,9 @@
+{
+  "name": "hzc",
+  "age": 25,
+  "hobby": ["编程", "乒乓球"],
+  "family": {
+    "father": "hlh",
+    "mother": "lsl"
+  }
+}

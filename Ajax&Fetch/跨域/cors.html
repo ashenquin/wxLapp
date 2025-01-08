@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const url = 'http://www.baidu.com';
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+      if(xhr.readyState !== 4) return;
+      if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+        console.log(xhr.responseText);
+      }
+    };
+    xhr.open('GET', url, true);
+    xhr.send(null);
+
+    // Access-Control-Allow-Origin
+    // 表明允许所有域名来跨域请求它，*是通配符，没有任何限制
+
+    // 使用CORS跨域的过程
+    // ①浏览器发送跨域请求
+    // ②后端在响应头中添加Access-Control-Allow-Origin头信息
+    // ③浏览器接收到响应
+    // ④如果是同域请求，则浏览器不会做什么
+    // ⑤如果是跨域请求，则浏览器会从响应头中查找是否允许跨域访问
+    // ⑥如果允许跨域，在通信圆满完成
+    // ⑦如果没找到或者不包含对应的跨域域名，则丢弃响应结果
+
+    // CORS的兼容性
+    // IE10及以上版本的浏览器可以正常使用CORS
+  </script>
+</body>
+</html>

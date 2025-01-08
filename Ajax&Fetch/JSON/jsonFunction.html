@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    // 1.JSON.parse()
+    // JSON.parse()可以将JSON格式的字符串解析成JS中的对应值
+    // 一定要是合法的JSON字符串，否则会报错
+
+    // 2.JSON.stringify()
+    // 将js中的基础数据类型、对象或数组字符串化成JSON数据格式
+
+    // 3.使用JSON.parse()和JSON.stringify()封装localstorage
+    import {get, set, remove, clear} from './storage.js';
+    const url = './array.json';
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+      if(xhr.readyState !== 4) return;
+      if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+        console.log(xhr.responseText);
+        console.log(JSON.parse(xhr.responseText))
+      }
+    };
+    xhr.open('GET', url, true);
+    xhr.send(null);
+  </script>
+</body>
+</html>

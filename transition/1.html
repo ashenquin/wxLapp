@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      transition: width .2s linear 0s;
+    }
+    .box1:hover { 
+      width: 500px;
+      height: 500px;
+    }
+    .box2 p {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      transition: left 1s linear 0s;
+      left: 0;
+    }
+    .box2:hover p{ 
+      left: 500px;
+      right: 500px;
+    }
+    .box3 {   
+      perspective: 100px;
+    } 
+    .box3 p {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      transition: all 2s linear 0s;
+      border-radius: 0;
+    }
+    .box3:hover p {
+      transform:scale(2) skew(10deg,20deg) rotate(360deg) translate3d(20px,40px,20px);
+      /* transform:scale(2) skew(10deg,20deg) rotate(360deg) translate3d(20px,40px,20px); */
+      /* transition: all 2s linear 0s; */
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2">
+    <p></p>
+  </div>
+  <div class="box3">
+    <p></p>
+  </div>
+</body>
+</html>

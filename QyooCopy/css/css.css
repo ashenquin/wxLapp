@@ -1,0 +1,20 @@
+.site-head {
+  height: 150px;
+}
+.site-head .topbar {
+  height: 32px;
+  background-color: #2a2a2a;
+  line-height: 32px;
+}
+.site-head .topbar a {
+  color: white;
+}
+.site-head .topbar .shortcut-links {
+  float: left;
+}
+/* .site-head .topbar .shortcut-links>ul {
+  
+} */
+.site-head .topbar .shortcut-links ul li {
+  float: left;
+}

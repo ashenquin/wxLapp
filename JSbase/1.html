@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>2-25</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+
+	<script>
+		function Stack() {
+			this.items = [];
+			Stack.prototype.push = function(e) {
+				this.items.push(e)
+			}
+			Stack.prototype.toString = function(e) {
+				var res = '';
+				for(var i = 0; i < this.items.length; i++){
+					res += i != this.items.length - 1 ? this.items[i] + ',' : this.items[i];
+				}
+				return res;
+			}
+		}
+		var a = new Stack();
+		a.push(1);
+		a.push(2);
+		a.push(3);
+		console.log(a);
+		alert(a);
+	</script>
+</body>
+
+</html>

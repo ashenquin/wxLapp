@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      transition: width 3s linear 0s;
+      margin-bottom: 10px;
+    }
+    .box:hover {
+      width: 500px; 
+    }
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: background-color 3s linear 0s;  
+    }
+    .box1:hover {
+      background-color: green;
+    }
+    .box2 {
+      width: 200px;
+      height: 200px;  
+      background-color: red;
+      transition: background-color 3s linear 0s;
+    } 
+    .box2:hover {   
+      background-color: green;
+    }
+    .box3 { 
+      width: 200px;
+      height: 200px;
+      background-color: red;  
+      transition: background-color 3s linear 0s;
+    }
+    .box3:hover {
+      background-color: green;
+      box-shadow: inset hoff voff blur #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- 宽度过渡 -->
+  <div class="box"></div>
+  <!-- 背景色过渡 -->
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+</body>
+</html>

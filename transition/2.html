@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      perspective: 500px;
+      margin: 200px auto;
+      position: relative;
+    }
+    .box p {
+      width: 200px;
+      height: 200px;
+    }
+    .box p.no1 {
+      background-image:linear-gradient(-45deg, purple, blue);
+    }
+    .box p.no2 {
+      background-image:linear-gradient(45deg, yellow, red);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: 100% 50%;
+      transition: all 1s linear 0s;
+      z-index: 2;
+    }
+    .box p.no3 {
+      width: 180px;
+      height: 180px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -90px;
+      margin-left: -90px;
+      transform-origin: 190px 90px;
+      transition: all 1s linear 0s;
+      /* border: 2px solid #000;
+      box-sizing: border-box; */
+      z-index: 1;
+      border: 2px solid #000;
+      box-sizing: border-box;
+    }
+    .box:hover p.no2 {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+    .box:hover p.no3 {
+      transform: rotateY(180deg);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p class="no1"></p>
+    <p class="no3"></p>
+    <p class="no2"></p>
+  </div>
+</body>
+</html>
